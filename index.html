@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geospatial Webpage</title>
+  <link rel="stylesheet" href="dist/css/output.css">
+  <script src="https://cdn.tailwindcss.com"></script> 
+  <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+</head>
+
+<!-- body start -->
+<body>
+
+  <!-- header start -->
+  <header class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent">
+      <div class="container">
+        <div class="relative flex items-center justify-between">
+          <div class="px-4">
+            <a href="#home" class="block py-6 text-lg font-bold text-primary">SPATIAL ARTS</a>
+          </div>
+          <div class="flex items-center px-4">
+            <button id="hamburger" name="hamburger" type="button" class="absolute right-4 block lg:hidden">
+              <span class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line transition duration-300 ease-in-out"></span>
+              <span class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a href="#home" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Beranda</a>
+                </li>
+                <li class="group">
+                  <a href="#about" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Tentang </a>
+                </li>
+                <li class="group">
+                  <a href="#portfolio" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Portfolio</a>
+                </li>
+                <li class="group">
+                  <a href="#clients" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Clients</a>
+                </li>
+                <li class="group">
+                  <a href="#blog" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Blog</a>
+                </li>
+                <li class="group">
+                  <a href="#contact" class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white">Contact</a>
+                </li>
+                <li class="mt-3 flex items-center pl-8 lg:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                        <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- -- header stop -- -->
+
+  <!-- hero section start -->
+  <section id="home" class="pt-36 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-base font-semibold text-primary md:text-xl">Welcome , it's <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">SPATIAL ARTS</span></h1>
+            <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">WEB <span class="text-dark dark:text-white">Geographic Information System</span></h2>
+            <p class="mb-10 font-medium leading-relaxed text-secondary">Web GIS is a pattern, or architectural approach, for implementing a modern GIS. It’s powered by web services standard services that deliver data and capabilities, and connect components.</span></p>
+            <a href="#" class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Hubungi Saya</a>
+          </div>
+
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10 lg:right-0 lg:mt-9">
+              <img src="dist/jpg/aset2.png" alt="Gambar" class="relative z-10 mx-auto max-w-full" />
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
+                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill="#14b8a6"
+                    d="M47.4,-51C59.2,-35.6,65.1,-17.8,63.4,-1.7C61.7,14.5,52.6,28.9,40.8,36.6C28.9,44.2,14.5,45,-2,47C-18.4,49,-36.8,52.1,-45.4,44.5C-53.9,36.8,-52.5,18.4,-51.2,1.3C-49.9,-15.8,-48.7,-31.7,-40.2,-47.1C-31.7,-62.4,-15.8,-77.3,1,-78.3C17.8,-79.2,35.6,-66.3,47.4,-51Z"
+                    transform="translate(100 100) scale(1.1)"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero section stop -->
+
+    <!-- content section start -->
+    <section id="content" class="pt-36 pb-32 dark:bg-dark">
+        <div class="container">
+          <div class="flex flex-wrap">
+            <div class="mb-10 w-full px-4 lg:w-1/2">
+               <h4 class="mb-3 text-lg font-bold uppercase text-primary">How is GIS used?</h4>
+               <p class="max-w-xl text-base font-medium text-secondary lg:text-lg text-justify"> Hundreds of thousands of organizations in virtually every field are using GIS to make maps that communicate, perform analysis, share information, and solve complex problems around the world. This is changing the way the world works.
+                  <ul class="max-w-xl text-base font-small text-secondary lg:text-lg list-disc list-inside ">
+                    <li>Identify problems</li>
+                    <li>Monitor change</li>
+                    <li>Manage and respond to events</li>
+                    <li>Perform forecasting</li>
+                    <li>Set priorities</li>
+                    <li>Understand trends</li>
+               </ul>
+               </p>
+            </div>
+            <div class="w-full px-4 lg:w-1/2">
+              <h4 class="mb-3 text-lg font-bold uppercase text-primary">How does GIS work?</h4>
+              <p class="max-w-xl text-base font-medium text-secondary lg:text-lg text-justify"> GIS technology applies geographic science with tools for understanding and collaboration. It helps people reach a common goal: to gain actionable intelligence from all types of data.
+                  <ul class="max-w-xl text-base font-small text-secondary lg:text-lg list-disc list-inside ">
+                    <li>Maps</li>
+                    <li>Data</li>
+                    <li>Analysis</li>
+               </ul>
+               </p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    
+    <!-- content section stop -->
+    
+    <!-- footer start -->
+  <footer class="bg-dark pt-24 pb-8">
+    <div class="container">
+      <div class="w-full border-t border-slate-700 pt-10">
+        <div class="text-center text-xs font-medium text-slate-500" >
+          <p>&copy; 2023 Geospatial Webpage. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+    </footer>
+  <!-- footer stop -->
+
+
+  <script src="./dist/js/script.js"></script>
+</body>
+</html>
